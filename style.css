@@ -1,0 +1,21 @@
+:root {
+	--brightness: 0.45;
+}
+div {
+	font-size: 200px;
+	height: 100vh;
+	height: 100dvh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(
+			rgba(0, 0, 0, var(--brightness)),
+			rgba(0, 0, 0, var(--brightness))
+		),
+		url(./sample.jpg);
+	background-position: center;
+	background-size: contain;
+	color: wheat;
+	flex-direction: column;
+}

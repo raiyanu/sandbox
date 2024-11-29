@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, 
+								initial-scale=1.0"
+		/>
+		<title>Embedding video in HTML</title>
+		<style>
+			@import url("gridy.css") layer(defaults) supports(display: grid) screen
+				and (max-width: 400px);
+			@import url("flexy.css")
+				supports((not (display: grid)) and (display: flex)) screen and
+				(max-width: 400px);
+			@layer defaults {
+				body {
+					background: rebeccapurple;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<video width="500px" height="300px" autoplay id="myvideo" controls>
+			<source
+				src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+				type="video/mp4"
+			/>
+			<source
+				src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+				type="video/webm"
+			/>
+			Your browser does not support this video tag.
+		</video>
+		<div>
+			<button id="PLAY">PLAY</button>
+			<button id="STOP">STOP</button>
+			<button id="FWD">FWD</button>
+			<button id="BWD">BWD</button>
+			<button id="MUTE">MUTE</button>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
