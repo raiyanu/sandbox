@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>String to HTML</title>
+	</head>
+	<body>
+		<script>
+			function createElementFromHTML(htmlString) {
+				var div = document.createElement("div");
+				div.innerHTML = htmlString.trim();
+				return div.firstChild;
+			}
+
+			document
+				.querySelector("body")
+				.appendChild(
+					createElementFromHTML(
+						'<h1>hey there<input type="range" name="brightness" id="brightness" maxlength="100" /></h1>'
+					)
+				).innerHTML = "Hello there";
+		</script>
+	</body>
+</html>

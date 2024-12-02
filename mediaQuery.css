@@ -1,0 +1,72 @@
+abbr {
+	color: chocolate;
+	cursor: pointer;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100dvh;
+	height: 100vh;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 500;
+}
+abbr {
+	font-weight: 800;
+}
+p {
+	max-width: 400px;
+	transition: font-size 0.3s ease-in-out;
+}
+p::selection {
+	color: white;
+	background-color: black;
+}
+abbr::selection {
+	color: rgb(66, 47, 134);
+	background-color: black;
+}
+/* @media (any-pointer) {
+	abbr::after {
+		content: " (" attr(title) ")";
+	}
+} */
+
+/* @media (min-aspect-ratio: 1/) {
+	abbr::after {
+		content: " (" attr(title) ")";
+	}
+} */
+
+@media (hover: hover) {
+	abbr:hover {
+		color: limegreen;
+		transition-duration: 1s;
+	}
+}
+
+@media not all and (hover: hover) {
+	abbr::after {
+		content: " (" attr(title) ")";
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	p {
+		font-size: 30px;
+		max-width: 400px;
+	}
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+	p {
+		font-size: 40px;
+		max-width: 600px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	p {
+		font-size: 50px;
+		max-width: 800px;
+	}
+}

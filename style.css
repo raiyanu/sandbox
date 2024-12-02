@@ -1,6 +1,11 @@
 :root {
 	--brightness: 0.45;
 }
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
 div {
 	font-size: 200px;
 	height: 100vh;
@@ -18,4 +23,7 @@ div {
 	background-size: contain;
 	color: wheat;
 	flex-direction: column;
+}
+input {
+	accent-color: grey;
 }

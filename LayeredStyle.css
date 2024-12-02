@@ -1,0 +1,41 @@
+@layer components , variations;
+
+button {
+	margin-top: 10px;
+	display: inline;
+	font-size: 20px;
+	padding: 8px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+@layer variations {
+	.button--ghost {
+		background: transparent;
+		border: 1px solid #333;
+	}
+	.button--ghost:hover {
+		background: #333;
+		border: 1px solid transparent;
+	}
+	.button--violet {
+		background: violet;
+		border: 1px solid white;
+	}
+	.button--violet:hover {
+		background: white;
+		border: 1px solid violet;
+	}
+}
+@layer components {
+	.button {
+		color: white;
+		font-size: 20px;
+		background: rosybrown;
+	}
+	.button:hover {
+		color: rosybrown;
+		font-size: 20px;
+		background: white;
+	}
+}
